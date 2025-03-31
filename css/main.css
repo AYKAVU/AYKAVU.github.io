@@ -96,7 +96,6 @@ body {
 	align-items: center;
 	position: relative;
 	text-align: center;
-	/* Update: */
 	top: -1px;
 	z-index: 10;
 }
@@ -131,7 +130,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px; /* Отступ сверху */
+    margin-top: 20px;
 }
 
 .footer-link {
@@ -149,7 +148,7 @@ body {
 }
 
 .footer-link:hover {
-    color: #478161; /* Выберите цвет для эффекта наведения */
+    color: #478161;
 }
 
 .main-article__content {
