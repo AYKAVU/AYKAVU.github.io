@@ -247,13 +247,13 @@
   .ar-shot::before { display: none; }
   .ar-shot .ar-logo { position: static; width: clamp(72px, 38%, 128px); height: auto; margin: auto 0 0;
     filter: drop-shadow(0 14px 26px rgba(0,0,0,.45)); }
-  .ar-shot span:last-child { position: static; margin: 0 auto auto; max-width: 92%; text-align: center;
+  .ar-shot span:last-child { position: static; align-self: stretch; margin: 0 0 auto; text-align: left;
     color: var(--g2); font-size: 11px; line-height: 1.45; }
   .brand-shot { background: #fff; color: #231f20; flex-direction: column; align-items: center;
     justify-content: center; gap: 12px; padding: 16px; }
   .brand-shot::before { display: none; }
   .brand-shot .brand-logo { position: static; width: 88%; height: auto; margin: auto 0 0; color: #231f20; }
-  .brand-shot span:last-child { position: static; margin: 0 auto auto; max-width: 92%; text-align: center;
+  .brand-shot span:last-child { position: static; align-self: stretch; margin: 0 0 auto; text-align: left;
     color: #6e737a; font-size: 10px; line-height: 1.45; letter-spacing: .06em; }
   .shot.has-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(12,12,12,.85)); }
   .shot.has-img span { z-index: 1; }
@@ -268,8 +268,7 @@
     .deco { opacity: .45; }
     .deco.tl { width: 84px; top: 2%; left: -2%; }
     .deco.tr { width: 84px; top: 2%; right: -2%; }
-    .deco.bl { width: 76px; bottom: 3%; left: 0; }
-    .deco.br { width: 88px; bottom: 3%; right: 0; }
+    .deco.bl, .deco.br { display: none; }
     .about h2 { position: relative; z-index: 2; }
     .card { padding: 14px; border-radius: 28px; position: static; transform: none !important; }
     .card-wrap { height: auto; margin-bottom: 18px; }
@@ -291,8 +290,7 @@
     .deco { opacity: .6; }
     .deco.tl { width: 130px; top: 2%; left: 0; }
     .deco.tr { width: 130px; top: 2%; right: 0; }
-    .deco.bl { width: 120px; bottom: 4%; left: 2%; }
-    .deco.br { width: 138px; bottom: 4%; right: 2%; }
+    .deco.bl, .deco.br { display: none; }
     .shot { padding: 16px; font-size: 11px; }
     .card-num { font-size: clamp(2.8rem, 9vw, 5rem); }
   }
