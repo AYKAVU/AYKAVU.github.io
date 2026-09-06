@@ -1,85 +1,543 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>QA Bychkov</title>
-
-    <link type="image/x-icon" href="/favicon.png" rel="shortcut icon">
-    <link type="Image/x-icon" href="/favicon.png" rel="icon">
-
-
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <script src="libs/gsap/gsap.min.js" defer></script>
-    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
-    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
-
-    <script src="js/app.js" defer></script>
-
-</head>
-<body>
-
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Владимир Бычков — QA Engineer</title>
+<meta name="description" content="Владимир Бычков — QA Engineer. Почти три года в тестировании: YADRO (KvadraID, менеджер паролей Kvadra) и МТС. Cypress, API, мобильные приложения, свои продукты с ИИ-агентами.">
+<link rel="icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Владимир Бычков — QA Engineer">
+<meta property="og:description" content="Владимир Бычков — QA Engineer. Почти три года в тестировании: YADRO (KvadraID, менеджер паролей Kvadra) и МТС. Cypress, API, мобильные приложения, свои продукты с ИИ-агентами.">
+<meta property="og:url" content="https://aykavu.github.io/">
+<meta property="og:image" content="https://aykavu.github.io/img/cv/5a32a8637f.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Яндекс.Метрика (перенесена со старой версии сайта) -->
+<script type="text/javascript">
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(97552714, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+   ym(97552714, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/97552714" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-    
-    <div class="wrapper">
-        <div class="content">
+<noscript><div><img src="https://mc.yandex.ru/watch/97552714" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap">
+<style>
+  /* ============================================================
+     По структуре промпта «Jack — 3D Creator», на данных Владимира.
+     React/Tailwind/Framer → чистый HTML/CSS/JS.
+     Kanit без кириллицы: заголовки латиницей в Kanit, русский — Manrope.
+     Чужие картинки (figma.site / CloudFront / motionsites) заменены
+     плашками, которые рисуются кодом — под замену на свои материалы.
+     ============================================================ */
+  :root {
+    --bg: #0C0C0C; --fg: #D7E2EA; --g1: #646973; --g2: #BBCCD7; --white: #FFFFFF; --ink: #0C0C0C;
+    --font-head: 'Kanit', sans-serif; --font-body: 'Manrope', 'Kanit', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); }
+  html { scroll-behavior: smooth; scroll-snap-type: y proximity; }
+  .hero, .marquee, .about, .stack-sec { scroll-snap-align: start; }
+  body { color: var(--fg); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  #root { background: var(--bg); overflow-x: clip; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; }
 
-            <header class="main-header">
-                <div class="layers">
-                    <div class="layer__header">
-                        <div class="layers__caption">Vladimir</div>
-                        <div class="layers__title">Bychkov</div>
-                    </div>
-                    <div class="layer layers__base" style="background-image: url(img/layer-base.png);"></div>
-                    <div class="layer layers__middle" style="background-image: url(img/layer-middle.png);"></div>
-                    <div class="layer layers__front" style="background-image: url(img/layer-front.png);"></div>
-                </div>
-            </header>
-        
-            <article class="main-article" style="background-image: url(img/dungeon.jpg);">
-                <div class="main-article__content">
-                    <h2 class="main-article__header">About me</h2>
-                    <p class="main-article__paragraph">Привет, я Вова, тестировщик с опытом на крутом проекте "Kvadra_T" компании Yadro. Навыки и инструменты с которымии я работаю - Jira, Miro, Android studio or adb, Postman, Charles Proxy, RabbitMQ, Git, REST API, Swagger, Unix, Figma, Cypress, Bash, Json.</p>
-                    <div class="footer-links">
-                        <a href="https://github.com/AYKAVU" target="_blank" class="footer-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://t.me/AYKAVU" target="_blank" class="footer-link">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                        <!-- <a href="resume.pdf" download class="footer-link">
-                            <i class="fas fa-file-download"></i> Download Resume
-                        </a>-->
-                    </div>
-                </div>
-                <div class="copy">© QA. Bychkov Vladimir</div>
-            </article>
+  .hero-heading {
+    background: linear-gradient(180deg, var(--g1) 0%, var(--g2) 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .display { font-family: var(--font-head); font-weight: 900; text-transform: uppercase; letter-spacing: -.025em; line-height: 1; }
 
-        </div>
+  /* FadeIn — once, ease [0.25,0.1,0.25,1], duration .7 */
+  .fade { opacity: 1; transform: none; }
+  .js .fade { opacity: 0; transform: translate(var(--fx, 0), var(--fy, 30px)); transition: opacity var(--dur, .7s) cubic-bezier(.25,.1,.25,1), transform var(--dur, .7s) cubic-bezier(.25,.1,.25,1); transition-delay: var(--d, 0s); }
+  .js .fade.in { opacity: 1; transform: none; }
+
+  /* ContactButton — по спецификации */
+  .contact-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 0; border-radius: 999px; color: #fff;
+    font-family: var(--font-head); font-weight: 500; text-transform: uppercase; letter-spacing: .12em;
+    background: linear-gradient(123deg, #18011F 7%, #B600A8 37%, #7621B0 72%, #BE4C00 100%);
+    box-shadow: 0 4px 4px rgba(181,1,167,.25), 4px 4px 12px #7721B1 inset;
+    outline: 2px solid #fff; outline-offset: -3px;
+    padding: 12px 32px; font-size: 12px;
+    transition: transform .25s;
+  }
+  .contact-btn:hover { transform: translateY(-2px); }
+  .hero-status { font-family: var(--font-body); font-weight: 500; text-transform: uppercase; letter-spacing: .14em; font-size: clamp(.7rem, 1.1vw, .9rem); color: var(--g1); text-align: right; line-height: 1.5; }
+  @media (min-width: 640px) { .contact-btn { padding: 14px 40px; font-size: 14px; } }
+  @media (min-width: 768px) { .contact-btn { padding: 16px 48px; font-size: 16px; } }
+
+  /* LiveProjectButton */
+  .live-btn {
+    display: inline-flex; align-items: center; border-radius: 999px;
+    border: 2px solid var(--fg); color: var(--fg); background: transparent;
+    font-family: var(--font-head); font-weight: 500; text-transform: uppercase; letter-spacing: .12em;
+    padding: 12px 32px; font-size: 14px; transition: background .2s; white-space: nowrap;
+  }
+  .live-btn:hover { background: rgba(215,226,234,.1); }
+  @media (min-width: 640px) { .live-btn { padding: 14px 40px; font-size: 16px; } }
+
+  /* ---------- 1. HERO ---------- */
+  .hero { position: relative; height: 100svh; min-height: 560px; display: flex; flex-direction: column; overflow-x: clip; }
+  .nav {
+    display: flex; justify-content: space-between; align-items: center; padding: 24px 24px 0;
+    font-family: var(--font-body); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: 14px;
+  }
+  .nav a { transition: opacity .2s; } .nav a:hover { opacity: .7; }
+  @media (min-width: 768px) { .nav { padding: 32px 40px 0; font-size: 18px; } }
+  @media (min-width: 1024px) { .nav { font-size: 1.4rem; } }
+
+  .hero-head-wrap { overflow: hidden; padding-top: 28px; margin-top: 0; }
+  .hero h1 { white-space: nowrap; width: 100%; font-size: 10.6vw; text-align: center; letter-spacing: -.04em; }
+  @media (min-width: 640px) { .hero h1 { font-size: 11.2vw; } .hero-head-wrap { padding-top: 32px; } }
+  @media (min-width: 768px) { .hero h1 { font-size: 11.8vw; } .hero-head-wrap { padding-top: 36px; } }
+  @media (min-width: 1024px) { .hero h1 { font-size: 12.4vw; } }
+
+  .hero-bottom { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; padding: 0 24px 28px; gap: 16px; }
+  @media (min-width: 640px) { .hero-bottom { padding-bottom: 32px; } }
+  @media (min-width: 768px) { .hero-bottom { padding: 0 40px 40px; } }
+  .hero-lede { font-weight: 300; text-transform: uppercase; letter-spacing: .06em; line-height: 1.3; font-size: clamp(.75rem, 1.4vw, 1.5rem); max-width: 160px; }
+  @media (min-width: 640px) { .hero-lede { max-width: 220px; } }
+  @media (min-width: 768px) { .hero-lede { max-width: 260px; } }
+
+  .portrait { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -46%); z-index: 10; width: 280px; pointer-events: none; }
+  @media (min-width: 640px) { .portrait { width: 360px; } }
+  @media (min-width: 768px) { .portrait { width: 440px; } }
+  @media (min-width: 1024px) { .portrait { width: 520px; } }
+  .magnet { will-change: transform; }
+  .portrait svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 40px 60px rgba(0,0,0,.6)); }
+
+  /* ---------- 2. MARQUEE ---------- */
+  .marquee { background: var(--bg); padding: 96px 0 40px; display: grid; gap: 12px; overflow: hidden; }
+  @media (min-width: 640px) { .marquee { padding-top: 128px; } }
+  @media (min-width: 768px) { .marquee { padding-top: 160px; } }
+  .row { display: flex; gap: 12px; will-change: transform; width: max-content; }
+  .tile {
+    width: 420px; height: 270px; border-radius: 16px; flex: none; overflow: hidden; position: relative;
+    display: flex; align-items: flex-end; padding: 18px; color: var(--fg);
+    font-family: var(--font-body); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; font-size: 13px;
+  }
+  .tile::before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 80% at var(--px,30%) var(--py,30%), var(--c1), transparent 70%), linear-gradient(160deg, #15171b, #0C0C0C 70%); }
+  .tile::after { content: ""; position: absolute; inset: 0; opacity: .35; background: repeating-linear-gradient(90deg, transparent 0 39px, rgba(255,255,255,.04) 39px 40px), repeating-linear-gradient(0deg, transparent 0 39px, rgba(255,255,255,.04) 39px 40px); }
+  .tile span { position: relative; z-index: 1; }
+  .tile img { position: absolute; left: 50%; top: 46%; width: 62%; height: 62%; object-fit: contain; transform: translate(-50%, -50%); z-index: 1;
+              filter: drop-shadow(0 18px 24px rgba(0,0,0,.55)); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+  .tile.has-obj::before { background: radial-gradient(45% 55% at 50% 58%, var(--c1), transparent 72%), linear-gradient(160deg, #15171b, #0C0C0C 70%); }
+  .tile.has-obj:hover img { transform: translate(-50%, -54%) scale(1.06); }
+  .tile.has-obj span { font-size: 12px; color: var(--g2); }
+  .tile.has-photo img { position: absolute; inset: 0; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; transform: none; filter: none; z-index: 0; transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+  .tile.has-photo::before { background: none; }
+  .tile.has-photo::after { background: radial-gradient(120% 120% at 50% 50%, transparent 55%, rgba(12,12,12,.45) 100%); opacity: 1; }
+  .tile.has-photo b { color: var(--g2); z-index: 2; }
+  .tile.has-photo span { z-index: 2; font-size: 12px; color: var(--fg); }
+  .tile.has-photo:hover img { transform: scale(1.04); }
+  .tile b { position: absolute; top: 16px; left: 18px; z-index: 1; font-weight: 400; font-size: 11px; color: var(--g1); letter-spacing: .14em; }
+
+  /* ---------- 3. ABOUT ---------- */
+  .about { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; gap: 40px; text-align: center; }
+  @media (min-width: 640px) { .about { padding: 80px 32px; gap: 56px; } }
+  @media (min-width: 768px) { .about { padding: 80px 40px; gap: 64px; } }
+  .about h2 { font-size: clamp(3rem, 12vw, 160px); }
+  .about-text { font-weight: 500; line-height: 1.6; max-width: 560px; font-size: clamp(1rem, 2vw, 1.35rem); }
+  .about-text .w { display: inline-block; opacity: 0; transform: translateY(10px); filter: blur(6px);
+    transition: opacity .55s ease, transform .55s cubic-bezier(.2,.8,.2,1), filter .55s ease; }
+  .about-text.lit .w { opacity: 1; transform: none; filter: none; }
+  .about-cta { margin-top: 24px; }
+  @media (min-width: 640px) { .about-cta { margin-top: 40px; } }
+  @media (min-width: 768px) { .about-cta { margin-top: 56px; } }
+  .deco { position: absolute; pointer-events: none; }
+  .deco svg { width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 30px rgba(0,0,0,.5)); }
+  .deco.tl { top: 4%; left: 1%; width: 120px; } .deco.bl { bottom: 8%; left: 3%; width: 100px; }
+  .deco.tr { top: 4%; right: 1%; width: 120px; } .deco.br { bottom: 8%; right: 3%; width: 130px; }
+  @media (min-width: 640px) { .deco.tl { left: 2%; width: 160px; } .deco.bl { left: 6%; width: 140px; } .deco.tr { right: 2%; width: 160px; } .deco.br { right: 6%; width: 170px; } }
+  @media (min-width: 768px) { .deco.tl { left: 4%; width: 210px; } .deco.bl { left: 10%; width: 180px; } .deco.tr { right: 4%; width: 210px; } .deco.br { right: 10%; width: 220px; } }
+
+
+  /* ---------- 3b. STACK — читаемый модуль вместо ленты инструментов ---------- */
+  .stack-sec { background: var(--bg); padding: 40px 20px 120px; }
+  @media (min-width: 640px) { .stack-sec { padding: 60px 32px 140px; } }
+  @media (min-width: 768px) { .stack-sec { padding: 80px 40px 160px; } }
+  .stack-sec h2 { text-align: center; font-size: clamp(3rem, 12vw, 160px); margin-bottom: 48px; }
+  @media (min-width: 768px) { .stack-sec h2 { margin-bottom: 72px; } }
+  .stack-grid { max-width: 72rem; margin: 0 auto; display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .stack-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 960px) { .stack-grid { grid-template-columns: repeat(3, 1fr); } }
+  .stack-group { border: 1px solid rgba(215,226,234,.14); border-radius: 24px; padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 14px; min-height: 220px; }
+  .stack-group header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .stack-group h3 { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: 15px; }
+  .stack-group header span { font-family: var(--font-head); font-weight: 300; font-size: 12px; color: var(--g1); letter-spacing: .12em; }
+  .stack-group ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
+  .stack-group li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; }
+  .stack-group li i { width: 8px; height: 8px; border-radius: 2px; background: var(--dot, var(--g2)); flex: none; }
+  .stack-group li.learning { color: var(--g1); }
+  .stack-group li.learning i { background: transparent; box-shadow: inset 0 0 0 1.5px var(--dot, var(--g2)); }
+  .stack-group li em { font-style: normal; font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--g1); border: 1px solid rgba(215,226,234,.18); border-radius: 999px; padding: 2px 7px; }
+  .stack-kinds { max-width: 72rem; margin: 14px auto 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .kinds-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--g1); margin-right: 6px; }
+  .stack-kinds b { font-weight: 500; font-size: 13px; padding: 7px 13px; border-radius: 999px;
+    border: 1px solid rgba(215,226,234,.16); color: var(--fg); }
+  .stack-note { max-width: 72rem; margin: 20px auto 0; font-size: 13px; color: var(--g1); text-align: right; }
+
+  /* ---------- 4. SERVICES ---------- */
+  .services { position: relative; background: var(--white); color: var(--ink); border-radius: 40px 40px 0 0; padding: 80px 20px; }
+  @media (min-width: 640px) { .services { border-radius: 50px 50px 0 0; padding: 96px 32px; } }
+  @media (min-width: 768px) { .services { border-radius: 60px 60px 0 0; padding: 128px 40px; } }
+  .services h2 { text-align: center; font-size: clamp(3rem, 12vw, 160px); margin-bottom: 64px; color: var(--ink); }
+  @media (min-width: 640px) { .services h2 { margin-bottom: 80px; } }
+  @media (min-width: 768px) { .services h2 { margin-bottom: 112px; } }
+  .svc { max-width: 64rem; margin: 0 auto; }
+  .svc-item { display: flex; gap: clamp(16px, 4vw, 56px); align-items: flex-start; padding: 32px 0; border-bottom: 1px solid rgba(12,12,12,.15); }
+  .svc-item:first-child { border-top: 1px solid rgba(12,12,12,.15); }
+  @media (min-width: 640px) { .svc-item { padding: 40px 0; } }
+  @media (min-width: 768px) { .svc-item { padding: 48px 0; } }
+  .svc-num { font-family: var(--font-head); font-weight: 900; font-size: clamp(3rem, 10vw, 140px); line-height: .9; color: var(--ink); flex: none; }
+  .svc-body { display: flex; flex-direction: column; gap: 10px; padding-top: .3em; }
+  .svc-title { font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: -.005em; font-size: clamp(1rem, 2.2vw, 2.1rem); line-height: 1.15; }
+  .svc-when { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; color: #6b7076; margin: -2px 0 10px; }
+  .svc-desc { font-weight: 300; line-height: 1.6; max-width: 42rem; font-size: clamp(.85rem, 1.6vw, 1.25rem); opacity: .6; }
+
+  /* ---------- 5. PROJECT — sticky-стек карточек ---------- */
+  .projects { position: relative; z-index: 10; background: var(--bg); color: var(--fg); border-radius: 40px 40px 0 0; margin-top: -40px; padding: 80px 20px 120px; }
+  @media (min-width: 640px) { .projects { border-radius: 50px 50px 0 0; margin-top: -48px; padding: 96px 32px 140px; } }
+  @media (min-width: 768px) { .projects { border-radius: 60px 60px 0 0; margin-top: -56px; padding: 128px 40px 160px; } }
+  .projects h2 { text-align: center; font-size: clamp(3rem, 12vw, 160px); margin-bottom: 40px; }
+  .stack { max-width: 72rem; margin: 0 auto; }
+  .card-wrap { height: 85vh; position: relative; }
+  .card {
+    position: sticky; top: 96px;
+    border-radius: 40px; border: 2px solid var(--fg); background: var(--bg);
+    padding: 16px; display: flex; flex-direction: column; gap: 20px;
+    transform-origin: top center; will-change: transform;
+  }
+  @media (min-width: 640px) { .card { border-radius: 50px; padding: 24px; } }
+  @media (min-width: 768px) { .card { top: 128px; border-radius: 60px; padding: 32px; } }
+  .card-top { display: flex; align-items: center; gap: 16px 28px; flex-wrap: wrap; }
+  .card-num { font-family: var(--font-head); font-weight: 900; font-size: clamp(3rem, 10vw, 140px); line-height: .9; color: var(--fg); }
+  .card-meta { display: flex; flex-direction: column; gap: 4px; flex: 1 1 200px; }
+  .card-cat { font-family: var(--font-body); font-weight: 500; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--g2); }
+  .card-name { font-family: var(--font-body); font-weight: 800; text-transform: uppercase; font-size: clamp(1.2rem, 2.6vw, 2.4rem); line-height: 1; }
+  .card-grid { display: grid; grid-template-columns: 40% 60%; gap: 12px; }
+  .card-col { display: grid; gap: 12px; align-content: start; }
+  .shot { border-radius: 40px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 18px; color: var(--fg); font-family: var(--font-body); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+  @media (min-width: 640px) { .shot { border-radius: 50px; } }
+  @media (min-width: 768px) { .shot { border-radius: 60px; } }
+  .shot::before { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 70% at var(--px,70%) var(--py,20%), var(--c1), transparent 70%), linear-gradient(160deg, #1a1d22, #0C0C0C 75%); }
+  .shot span { position: relative; }
+  .shot.s1 { height: clamp(130px, 16vw, 230px); }
+  .shot.s2 { height: clamp(160px, 22vw, 340px); }
+  .shot.s3 { height: 100%; min-height: 300px; }
+  .shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .logo-shot { background: #0a0e0a; }
+  .logo-shot::before { display: none; }
+  .logo-shot img { position: absolute; inset: 14% 8% 26%; width: auto; height: auto; max-width: 84%; max-height: 60%;
+    margin: auto; object-fit: contain; }
+  .logo-shot span { z-index: 1; color: var(--g2); font-size: 11px; line-height: 1.4; }
+  .ar-shot { background: linear-gradient(150deg, #141b2e, #0c1020 70%); align-items: center; justify-content: center; padding: 14% 10%; }
+  .ar-shot::before { display: none; }
+  .ar-shot .ar-logo { position: static; width: clamp(76px, 44%, 140px); height: auto; margin: 0;
+    filter: drop-shadow(0 14px 26px rgba(0,0,0,.45)); }
+  .ar-shot span:last-child { position: absolute; left: 18px; right: 18px; bottom: 14px; color: var(--g2); font-size: 11px; line-height: 1.4; }
+  .brand-shot { background: #fff; color: #231f20; align-items: center; justify-content: center; padding: 12% 8%; }
+  .brand-shot::before { display: none; }
+  .brand-shot .brand-logo { position: static; width: 100%; height: auto; margin: 0; color: #231f20; }
+  .brand-shot span:last-child { position: absolute; left: 18px; right: 18px; bottom: 14px;
+    color: #8a8f96; font-size: 10px; letter-spacing: .08em; }
+  .shot.has-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(12,12,12,.85)); }
+  .shot.has-img span { z-index: 1; }
+  .todo { color: #ffb08a; }
+
+  .footer { background: var(--bg); text-align: center; padding: 0 20px 48px; font-family: var(--font-body); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--g1); }
+  .footer a { color: var(--g2); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; scroll-snap-type: none; }
+    .js .fade { opacity: 1; transform: none; transition: none; }
+    .about-text span { opacity: 1; }
+    .contact-btn, .live-btn { transition: none; }
+    .card { transform: none !important; }
+  }
+</style>
+
+</head>
+<body>
+<div id="root">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="top">
+    <div class="hero-head-wrap">
+      <h1 class="display hero-heading fade" style="--fy:40px; --d:.15s">Hi, i&#8217;m vladimir</h1>
     </div>
 
+    <div class="portrait" aria-hidden="true">
+      <div class="fade" style="--fy:30px; --d:.6s"><div class="magnet" id="magnet"><img src="img/cv/5a32a8637f.png" alt="" width="876" height="1147" style="width:100%;height:auto;display:block;filter:drop-shadow(0 40px 60px rgba(0,0,0,.6))"></div></div>
+    </div>
+
+    <div class="hero-bottom">
+      <p class="hero-lede fade" style="--fy:20px; --d:.35s">QA-инженер<br>Vibe-кодер<br>Технарь</p>
+      <p class="hero-status fade" style="--fy:20px; --d:.5s">Санкт-Петербург · удалённо или гибрид</p>
+    </div>
+  </section>
+
+  <!-- 2. MARQUEE -->
+  <section class="marquee" id="marquee" aria-label="Лента работ">
+    <div class="row" id="row1"></div>
+    <div class="row" id="row2"></div>
+  </section>
+
+  <!-- 3. ABOUT -->
+  <section class="about" id="about">
+    <div class="deco tl fade" style="--fx:-80px; --fy:0; --d:.1s; --dur:.9s" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><radialGradient id="m1" cx=".35" cy=".3" r=".7"><stop offset="0" stop-color="#d9e2ea"/><stop offset="1" stop-color="#3a4048"/></radialGradient></defs><circle cx="100" cy="100" r="80" fill="url(#m1)"/><circle cx="70" cy="80" r="14" fill="#5a636c" opacity=".6"/><circle cx="125" cy="120" r="9" fill="#5a636c" opacity=".6"/><circle cx="110" cy="65" r="6" fill="#5a636c" opacity=".6"/></svg>
+    </div>
+    <div class="deco bl fade" style="--fx:-80px; --fy:0; --d:.25s; --dur:.9s" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><linearGradient id="b1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cf29b"/><stop offset="1" stop-color="#1d5a34"/></linearGradient></defs><rect x="40" y="40" width="120" height="120" rx="28" fill="url(#b1)" transform="rotate(18 100 100)"/><rect x="66" y="66" width="68" height="68" rx="14" fill="#0C0C0C" opacity=".35" transform="rotate(18 100 100)"/></svg>
+    </div>
+    <div class="deco tr fade" style="--fx:80px; --fy:0; --d:.15s; --dur:.9s" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><defs><linearGradient id="l1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a7a"/><stop offset="1" stop-color="#a8352a"/></linearGradient></defs><rect x="30" y="70" width="140" height="90" rx="10" fill="url(#l1)"/><circle cx="65" cy="70" r="16" fill="#ff8a7a"/><circle cx="100" cy="70" r="16" fill="#ff8a7a"/><circle cx="135" cy="70" r="16" fill="#ff8a7a"/><rect x="30" y="150" width="140" height="12" rx="4" fill="#7a2a22"/></svg>
+    </div>
+    <div class="deco br fade" style="--fx:80px; --fy:0; --d:.3s; --dur:.9s" aria-hidden="true">
+      <svg viewBox="0 0 220 200"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#BBCCD7"/><stop offset="1" stop-color="#4a545e"/></linearGradient></defs><rect x="20" y="60" width="90" height="90" rx="20" fill="url(#g1)"/><circle cx="160" cy="70" r="40" fill="url(#g1)"/><rect x="120" y="120" width="80" height="50" rx="14" fill="url(#g1)" opacity=".8"/></svg>
+    </div>
+
+    <h2 class="display hero-heading fade" style="--fy:40px; --d:0s">About me</h2>
+    <p class="about-text" id="about-text">Почти три года тестирую продукты — сначала в МТС, потом в YADRO. Последние — KvadraID, единый сервис авторизации экосистемы KvadraOS, и менеджер паролей Kvadra. Тестирую руками, учусь и практикуюсь кодом. Написал e2e-автотесты на Cypress, которые закрыли треть регресса и сократили ручной прогон на день. Лезу под интерфейс — в REST, RabbitMQ, логи устройства, перехваченный трафик. Параллельно собираю свои продукты с ИИ-агентами: AppRevive возвращает на iPhone приложения, которых больше нет в App Store, Caretica — учебный портал с настоящими Python, SQL и Git в браузере. Это научило меня видеть код с другой стороны: как он устроен, где трещит и почему деплой — тоже тест. Буду рад присоединиться к дружелюбной команде с большими амбициями и интересными проектами.</p>
+    <a class="contact-btn about-cta" href="https://t.me/vladimir_bychkov_qa" target="_blank" rel="noopener">Contact Me</a>
+  </section>
+
+
+  <!-- 3b. STACK -->
+  <section class="stack-sec" id="stack-sec">
+    <h2 class="display hero-heading fade" style="--fy:40px">Stack</h2>
+    <div class="stack-grid">
+        <div class="stack-group fade" style="--dot:#7cf29b; --d:0.00s"><header><h3>API и данные</h3><span>07</span></header><ul><li><i></i>Postman</li><li><i></i>Swagger</li><li><i></i>REST API</li><li><i></i>JSON</li><li><i></i>SQL</li><li><i></i>PostgreSQL</li><li><i></i>DBeaver</li></ul></div>
+        <div class="stack-group fade" style="--dot:#8fd0ff; --d:0.08s"><header><h3>Mobile</h3><span>06</span></header><ul><li><i></i>Android</li><li><i></i>iOS</li><li><i></i>Android Studio</li><li><i></i>adb</li><li><i></i>logcat</li><li class="learning"><i></i>Xcode<em>учу</em></li></ul></div>
+        <div class="stack-group fade" style="--dot:#ffb08a; --d:0.16s"><header><h3>Трафик и очереди</h3><span>06</span></header><ul><li><i></i>Charles Proxy</li><li><i></i>Proxyman</li><li><i></i>HTTP / HTTPS</li><li><i></i>DevTools</li><li><i></i>RabbitMQ</li><li><i></i>Kafka</li></ul></div>
+        <div class="stack-group fade" style="--dot:#c9a4ff; --d:0.24s"><header><h3>ИИ и агенты</h3><span>07</span></header><ul><li><i></i>Claude Code</li><li><i></i>Codex</li><li><i></i>Cursor</li><li><i></i>MCP</li><li><i></i>Agent Skills</li><li><i></i>Prompting</li><li><i></i>Оркестрация агентов</li></ul></div>
+        <div class="stack-group fade" style="--dot:#ffe08a; --d:0.32s"><header><h3>Автоматизация</h3><span>07</span></header><ul><li><i></i>Cypress</li><li class="learning"><i></i>Python<em>учу</em></li><li><i></i>Bash</li><li><i></i>Git / Gerrit</li><li><i></i>Jenkins</li><li><i></i>Docker</li><li><i></i>Unix / Linux</li></ul></div>
+        <div class="stack-group fade" style="--dot:#a8ffd9; --d:0.40s"><header><h3>Процесс</h3><span>05</span></header><ul><li><i></i>Jira</li><li><i></i>Confluence</li><li><i></i>Miro</li><li><i></i>Figma</li><li><i></i>Agile</li></ul></div>
+    </div>
+    <div class="stack-kinds fade">
+      <span class="kinds-label">Виды тестирования</span>
+      <b>Функциональное</b>
+      <b>Регрессионное</b>
+      <b>Интеграционное</b>
+      <b>Smoke</b>
+      <b>E2E</b>
+      <b>Нефункциональное</b>
+      <b>Адаптивность</b>
+      <b>Локализация</b>
+      <b>Темизация</b>
+      <b>Вёрстка</b>
+    </div>
+    <p class="stack-note">38 инструментов · 6 групп · 2 в изучении</p>
+  </section>
+
+  <!-- 4. EXPERIENCE -->
+  <section class="services" id="experience">
+    <h2 class="display">Experience</h2>
+    <div class="svc" id="svc"></div>
+  </section>
+
+  <!-- 5. PROJECT -->
+  <section class="projects" id="projects">
+    <h2 class="display hero-heading">Project</h2>
+    <div class="stack" id="stack"></div>
+  </section>
+
+  <footer class="footer" id="contact">
+    <p>Vladimir Bychkov · QA Engineer · <a href="https://github.com/AYKAVU">github.com/AYKAVU</a> · email <a href="mailto:vladimirbychkov2708@gmail.com">vladimirbychkov2708@gmail.com</a> · telegram <a href="https://t.me/vladimir_bychkov_qa">@vladimir_bychkov_qa</a></p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  document.documentElement.classList.add('js');
+
+  /* ---- плавный переход по якорям (Contact Me и др.), ~900 мс, ease-in-out ---- */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    var target = document.querySelector(a.getAttribute('href')); if (!target) return;
+    e.preventDefault();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { target.scrollIntoView(); return; }
+    var from = window.scrollY, to = target.getBoundingClientRect().top + from - 24, t0 = null, D = 900;
+    function ease(t) { return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+    function step(ts) { if (t0 === null) t0 = ts; var k = Math.min(1, (ts - t0) / D); window.scrollTo(0, from + (to - from) * ease(k)); if (k < 1) requestAnimationFrame(step); else history.replaceState(null, '', a.getAttribute('href')); }
+    requestAnimationFrame(step);
+  });
+
+  /* ---- h1 целиком в строку: подгоняем размер шрифта, не сжимаем буквы ---- */
+  var h1 = document.querySelector('.hero h1');
+  function fitHeading() {
+    h1.style.fontSize = '';
+    var box = h1.parentElement.clientWidth, w = h1.scrollWidth;
+    if (w > box) h1.style.fontSize = (parseFloat(getComputedStyle(h1).fontSize) * box / w * 0.985) + 'px';
+  }
+  fitHeading();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeading);
+  window.addEventListener('resize', fitHeading);
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- данные ---- */
+  var SERVICES = [
+    ['2023', 'МТС · Специалист по ИТ', 'декабрь 2023 — июнь 2024',
+     'Внутренняя Service Desk: функциональное, интеграционное и sanity-тестирование фронта и REST API. Дежурства по инцидентам — локализация через DevTools и Postman. Kafka: мониторинг топиков и тестовые сообщения. Docker для тестовых окружений.'],
+    ['2024', 'YADRO · QA Engineer', 'июль 2024 — май 2026 · экосистема KvadraOS',
+     'KvadraID — единый сервис авторизации всей экосистемы — и менеджер паролей Kvadra. Функциональное, регрессионное, smoke, интеграционное и нефункциональное тестирование. E2E на Cypress. REST и RabbitMQ. Разбор инцидентов с прода по логам. Документация в Confluence. Подготовка к сертификации ФСТЭК.'],
+    ['2026', 'Свои продукты · ИИ-агенты', 'в свободное от работы время',
+     'AppRevive и Caretica — от идеи до деплоя, с командой ИИ-агентов вместо команды разработчиков. Постановка задач, ревью того, что они принесли, приёмка по фактам, а не по отчётам. Взгляд на код с другой стороны: как он устроен и где трещит.']
+  ];
+
+  var PROJECTS = [
+    { cat: 'YADRO · KvadraOS · 2024–2026', name: 'KvadraID', c: '#6b3fa0', link: 'https://my.kvadra.tech/',
+      shots: [['kvadra ID · единый вход в экосистему',null,'brand'], ['Личный кабинет: сервисы KVADRA','img/cv/848dc5d7e6.webp'], ['Страница входа: почта, QR-код, аккаунт другого сервиса','img/cv/f696050c6b.webp']], todo: false },
+    { cat: 'Own product · macOS · SwiftUI · 2026', name: 'AppRevive', c: '#2a3a5a', link: 'https://github.com/AYKAVU',
+      shots: [['Возвращает на iPhone приложения, которых больше нет в App Store',null,'apprevive'], ['Библиотека IPA: файлы подписаны на твой Apple ID','img/cv/004a9d812b.webp'], ['Устройство и статусы: удалено везде · другой регион · есть в Store','img/cv/cdf42d127e.webp']], todo: false },
+    { cat: 'Own product · Learning portal · Cloudflare · 2026', name: 'Caretica', c: '#1f5a3a', link: 'https://caretica.codelearn.workers.dev',
+      shots: [['33 курса · 619 уроков · код запускается в браузере','img/cv/e2e5c99071.webp','logo'], ['Каталог: Python, JS, TS, SQL, Docker, Git, CS','img/cv/a611323eef.webp'], ['Личный кабинет: прогресс, стрик, избранное','img/cv/e955032f14.webp']], todo: false }
+  ];
+  var TILES = [
+    ['Bug hunting','Поиск багов','#3a5a1f','img/cv/8ca870ccc2.webp'],
+    ['Android','Мобильное тестирование','#2a5a3a','img/cv/d3d2372ae7.webp'],
+    ['API','Запросы и контракты','#5a3a24','img/cv/876926847f.webp'],
+    ['Terminal','adb · Bash · Unix','#2a3a5a','img/cv/7401641dcd.webp'],
+    ['Queues','RabbitMQ','#5a4a24','img/cv/b3d4a4801b.webp'],
+    ['Kvadra_T','Планшет · YADRO','#1f4a3a','img/cv/bfa4a0fc41.webp'],
+    ['Test cases','Чек-листы и кейсы','#3a3a5a','img/cv/7e0b6a5d8c.webp'],
+    ['PASS','Регресс зелёный','#1f5a2a','img/cv/9ffae8775a.webp'],
+    ['FAIL','Найдено до релиза','#5a2424','img/cv/8d14824d6a.webp'],
+    ['Traffic','Charles Proxy','#24405a','img/cv/8adbceffe5.webp'],
+    ['Git','Ветки и версии','#5a3a1f','img/cv/84d5c3c609.webp'],
+    ['','','#24303a','img/cv/7cbeed5261.webp','photo'],
+    ['','','#24303a','img/cv/a6618170a0.webp','photo'],
+    ['','','#24303a','img/cv/13f63ddcc6.webp','photo'],
+    ['','','#24303a','img/cv/7298faa8ba.webp','photo'],
+    ['','','#24303a','img/cv/6a6b0be9c7.webp','photo']
+  ];
+
+  /* ---- Experience: годы вместо номеров, ступенчатый FadeIn ---- */
+  var svc = document.getElementById('svc');
+  svc.innerHTML = SERVICES.map(function (s, i) {
+    return '<div class="svc-item fade" style="--fy:30px; --d:' + (i * 0.1) + 's"><div class="svc-num">' + s[0] + '</div>' +
+      '<div class="svc-body"><h3 class="svc-title">' + s[1] + '</h3><p class="svc-when">' + s[2] + '</p><p class="svc-desc">' + s[3] + '</p></div></div>';
+  }).join('');
+
+  /* ---- Project: sticky-стек ---- */
+  var stack = document.getElementById('stack');
+  stack.innerHTML = PROJECTS.map(function (p, i) {
+    var shots = p.shots.map(function (t, k) {
+      var img = t[1] ? '<img src="' + t[1] + '" alt="" loading="lazy">' : '';
+      if (t[2] === 'logo') {
+        return '<div class="shot s1 logo-shot"><img src="' + t[1] + '" alt="" loading="lazy"><span>' + t[0] + '</span></div>';
+      }
+      if (t[2] === 'apprevive') {
+        return '<div class="shot s1 ar-shot"><img class="ar-logo" src="img/cv/7cbe874612.png" alt="AppRevive" width="512" height="512"><span>' + t[0] + '</span></div>';
+      }
+      if (t[2] === 'brand') {
+        return '<div class="shot s1 brand-shot"><svg class="brand-logo" viewBox="22 106 356 68" fill="currentColor" role="img" aria-label="kvadra"><path d="M152.03,130.07h13.79l10.16,21.49,10.79-21.49h13.77l-19.11,35.61h-10.29l-19.11-35.61ZM325.04,130.07c-6.45,0-11.83,2.47-14.77,7.86v-7.86h-12.43v35.61h12.43v-15.29c0-6.73,2.72-8.85,10.19-8.85,1.62,0,7.67-.01,7.67-.01v-11.45h-3.1ZM349.54,129.36c14.24,0,20.46,4.34,20.46,13.66v22.66h-11.46v-5.43c-3.7,3.91-9.49,6.14-16.57,6.14-9.39,0-14.95-4.01-14.95-10.75s5.12-11.02,16.83-11.14c11.71-.11,14.5-.22,14.5-.22,0-4.53-2.78-6.25-9-6.25-5.17,0-8.27,1.1-8.88,3.49h-12.56c1.78-8.14,9.13-12.16,21.63-12.16M344.82,157.97c7.83,0,13.72-2.84,13.72-6.32v-.22s-12.26.02-15.28.19c-3.01.18-4.21,1.36-4.21,3.17,0,2.2,1.75,3.17,5.76,3.17M220.12,129.36c14.24,0,20.46,4.34,20.46,13.66v22.66h-11.46v-5.43c-3.7,3.91-9.49,6.14-16.57,6.14-9.39,0-14.95-4.01-14.95-10.75s5.12-11.02,16.83-11.14c11.71-.11,14.5-.22,14.5-.22,0-4.53-2.78-6.25-9-6.25-5.17,0-8.27,1.1-8.88,3.49h-12.56c1.78-8.14,9.13-12.16,21.63-12.16M215.39,157.97c7.83,0,13.72-2.84,13.72-6.32v-.22s-12.26.02-15.28.19c-3.01.18-4.21,1.36-4.21,3.17,0,2.2,1.75,3.17,5.76,3.17M292.47,113.61v52.07h-12.49v-5.62c-3.58,3.98-9,6.33-15.6,6.33-12.3,0-19.81-7.12-19.81-18.51s7.57-18.52,19.81-18.52c6.54,0,12.04,2.4,15.6,6.34v-22.09h12.49ZM268.39,156.81c7.51,0,11.59-2.1,11.59-8.93s-4.08-8.94-11.59-8.94-11.14,2.09-11.14,8.94,3.69,8.93,11.14,8.93M155.82,165.68l-16.98-19.25,14.38-16.36h-13.77l-17.53,20.95v-37.41h-12.37v52.07h12.37l9.56-10.88,9.6,10.88h14.74ZM82.09,113.61H30v13.02h52.09v-13.02ZM82.09,152.68H30v13.02h52.09v-13.02Z"/></svg><span>' + t[0] + '</span></div>';
+      }
+      return '<div class="shot s' + (k + 1) + (t[1] ? ' has-img' : '') + '" style="--c1:' + p.c + ';--px:' + (30 + k * 25) + '%;--py:' + (20 + k * 20) + '%">' + img + '<span' + (p.todo ? ' class="todo"' : '') + '>' + t[0] + '</span></div>';
+    });
+    return '<div class="card-wrap"><article class="card" data-i="' + i + '" style="top:calc(var(--top, 96px) + ' + (i * 28) + 'px)">' +
+      '<div class="card-top"><div class="card-num">0' + (i + 1) + '</div><div class="card-meta"><span class="card-cat">' + p.cat + '</span><span class="card-name' + (p.todo ? ' todo' : '') + '">' + p.name + '</span></div>' +
+      '<a class="live-btn" href="' + p.link + '" target="_blank" rel="noopener">Live Project</a></div>' +
+      '<div class="card-grid"><div class="card-col">' + shots[0] + shots[1] + '</div><div class="card-col">' + shots[2] + '</div></div></article></div>';
+  }).join('');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var wraps = Array.prototype.slice.call(document.querySelectorAll('.card-wrap'));
+  function onStack() {
+    var n = cards.length;
+    for (var i = 0; i < n; i++) {
+      var target = 1 - (n - 1 - i) * 0.03;
+      var r = wraps[i].getBoundingClientRect();
+      // прогресс от момента прилипания карточки до конца её контейнера
+      var prog = Math.max(0, Math.min(1, (-r.top) / (r.height * 0.6)));
+      cards[i].style.transform = 'scale(' + (1 + (target - 1) * prog) + ')';
+    }
+  }
+  function setTop() { document.documentElement.style.setProperty('--top', window.innerWidth >= 768 ? '128px' : '96px'); }
+  setTop(); window.addEventListener('resize', setTop);
+
+  /* ---- FadeIn (whileInView once, margin 50px) ---- */
+  var fades = document.querySelectorAll('.fade');
+  if (calm || !('IntersectionObserver' in window)) {
+    fades.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '50px', threshold: 0 });
+    fades.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---- Magnet ---- */
+  var magnet = document.getElementById('magnet'), wrap = magnet.parentElement, PAD = 150, STRENGTH = 3;
+  if (!calm && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    window.addEventListener('pointermove', function (e) {
+      var r = wrap.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      var inside = e.clientX > r.left - PAD && e.clientX < r.right + PAD && e.clientY > r.top - PAD && e.clientY < r.bottom + PAD;
+      if (inside) { magnet.style.transition = 'transform 0.3s ease-out'; magnet.style.transform = 'translate3d(' + ((e.clientX - cx) / STRENGTH) + 'px,' + ((e.clientY - cy) / STRENGTH) + 'px,0)'; }
+      else { magnet.style.transition = 'transform 0.6s ease-in-out'; magnet.style.transform = 'translate3d(0,0,0)'; }
+    }, { passive: true });
+  }
+
+  /* ---- Marquee ---- */
+  function buildRow(el, items) {
+    var html = '';
+    for (var k = 0; k < 3; k++) items.forEach(function (t, i) {
+      var isPhoto = t[4] === 'photo';
+      var img = t[3] ? '<img src="' + t[3] + '" alt="" loading="lazy">' : '';
+      var cap = t[0] ? '<b>' + t[0] + '</b>' : '', sub = t[1] ? '<span>' + t[1] + '</span>' : '';
+      html += '<div class="tile' + (t[3] ? (isPhoto ? ' has-photo' : ' has-obj') : '') + '" style="--c1:' + t[2] + ';--px:50%;--py:45%">' + cap + img + sub + '</div>';
+    });
+    el.innerHTML = html;
+  }
+  var row1 = document.getElementById('row1'), row2 = document.getElementById('row2'), section = document.getElementById('marquee');
+  buildRow(row1, TILES.slice(0, 11)); buildRow(row2, TILES.slice(11, 16));
+  function onMarquee() {
+    var top = section.getBoundingClientRect().top + window.scrollY;
+    var offset = (window.scrollY - top + window.innerHeight) * 0.3;
+    row1.style.transform = 'translateX(' + (offset - 200) + 'px)';
+    row2.style.transform = 'translateX(' + (-(offset - 200)) + 'px)';
+  }
+
+  /* ---- AnimatedText: волна по словам, один раз при входе в блок ---- */
+  var p = document.getElementById('about-text'), text = p.textContent;
+  p.textContent = '';
+  var frag = document.createDocumentFragment(), words = [], idx = 0;
+  text.split(/(\s+)/).forEach(function (chunk) {
+    if (/^\s+$/.test(chunk) || !chunk) { frag.appendChild(document.createTextNode(chunk)); return; }
+    var s = document.createElement('span');
+    s.className = 'w';
+    s.textContent = chunk;
+    s.style.transitionDelay = (idx++ * 22) + 'ms';
+    frag.appendChild(s);
+    words.push(s);
+  });
+  p.appendChild(frag);
+
+  if (calm || !('IntersectionObserver' in window)) {
+    p.classList.add('lit');
+  } else {
+    var aboutIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { p.classList.add('lit'); aboutIO.disconnect(); }
+      });
+    }, { threshold: 0.35 });
+    aboutIO.observe(p);
+  }
+
+  function onScroll() { onMarquee(); onStack(); }
+  if (!calm) { window.addEventListener('scroll', onScroll, { passive: true }); onScroll(); }
+  else { onMarquee(); }
+})();
+</script>
 </body>
 </html>
-
-
