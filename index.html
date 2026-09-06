@@ -2,17 +2,20 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Владимир Бычков — QA Engineer</title>
 <meta name="description" content="Владимир Бычков — QA Engineer. Почти три года в тестировании: YADRO (KvadraID, менеджер паролей Kvadra) и МТС. Cypress, API, мобильные приложения, свои продукты с ИИ-агентами.">
-<link rel="icon" href="favicon.png">
+<meta name="theme-color" content="#0C0C0C">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Владимир Бычков — QA Engineer">
 <meta property="og:description" content="Владимир Бычков — QA Engineer. Почти три года в тестировании: YADRO (KvadraID, менеджер паролей Kvadra) и МТС. Cypress, API, мобильные приложения, свои продукты с ИИ-агентами.">
 <meta property="og:url" content="https://aykavu.github.io/">
-<meta property="og:image" content="https://aykavu.github.io/img/cv/5a32a8637f.png">
-<meta name="twitter:card" content="summary_large_image">
-<!-- Яндекс.Метрика (перенесена со старой версии сайта) -->
+<meta property="og:image" content="https://aykavu.github.io/apple-touch-icon.png">
+<meta name="twitter:card" content="summary">
 <script type="text/javascript">
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
@@ -21,7 +24,6 @@
    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
    ym(97552714, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/97552714" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap">
@@ -240,7 +242,7 @@
   .logo-shot img { position: absolute; inset: 14% 8% 26%; width: auto; height: auto; max-width: 84%; max-height: 60%;
     margin: auto; object-fit: contain; }
   .logo-shot span { z-index: 1; color: var(--g2); font-size: 11px; line-height: 1.4; }
-  .ar-shot { background: linear-gradient(150deg, #141b2e, #0c1020 70%); align-items: center; justify-content: center; padding: 14% 10%; }
+  .ar-shot { background: linear-gradient(150deg, #141b2e, #0c1020 70%); align-items: center; justify-content: flex-start; padding: 12% 10% 0; }
   .ar-shot::before { display: none; }
   .ar-shot .ar-logo { position: static; width: clamp(76px, 44%, 140px); height: auto; margin: 0;
     filter: drop-shadow(0 14px 26px rgba(0,0,0,.45)); }
@@ -257,6 +259,27 @@
   .footer { background: var(--bg); text-align: center; padding: 0 20px 48px; font-family: var(--font-body); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--g1); }
   .footer a { color: var(--g2); }
 
+  /* ---------- iPhone ---------- */
+  @media (max-width: 640px) {
+    .card { padding: 14px; border-radius: 28px; position: static; transform: none !important; }
+    .card-wrap { height: auto; margin-bottom: 18px; }
+    .card-top { gap: 10px 16px; }
+    .card-num { font-size: clamp(2.4rem, 13vw, 3.4rem); }
+    .card-grid { grid-template-columns: 1fr; gap: 10px; }
+    .shot { border-radius: 24px; padding: 14px; font-size: 11px; }
+    .shot.s1 { height: 190px; }
+    .shot.s2 { height: 200px; }
+    .shot.s3 { min-height: 220px; height: 220px; }
+    .hero-lede { max-width: 60%; font-size: 12px; letter-spacing: .04em; }
+    .hero-status { font-size: 10px; max-width: 38%; }
+    .projects h2, .stack-sec h2, .about h2, .services h2 { font-size: clamp(2.6rem, 15vw, 4rem); }
+  }
+  /* ---------- iPad ---------- */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .shot { padding: 16px; font-size: 11px; }
+    .card-num { font-size: clamp(2.8rem, 9vw, 5rem); }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; scroll-snap-type: none; }
     .js .fade { opacity: 1; transform: none; transition: none; }
@@ -265,7 +288,6 @@
     .card { transform: none !important; }
   }
 </style>
-
 </head>
 <body>
 <div id="root">
